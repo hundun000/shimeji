@@ -15,7 +15,6 @@ import com.wishes.update.DownloadDialog;
 import com.wishes.utils.FormatUtils;
 import com.wishes.utils.UpdateChecker;
 import org.apache.log4j.xml.DOMConfigurator;
-import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -83,19 +82,19 @@ public class Main {
     public static void main(final String[] args) {
         try {
             //检测更新
-            new Thread(() -> {
-                try {
-                    if (UpdateChecker.checkUpdate(
-                            UpdateChecker.CHECK_UPDATE_TYPE
-                                    .MANUAL) != null) {
-                        //显示更新提示框
-                        new DownloadDialog();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    log.log(Level.SEVERE, "检测更新时请求数据失败！", e);
-                }
-            }).start();
+//            new Thread(() -> {
+//                try {
+//                    if (UpdateChecker.checkUpdate(
+//                            UpdateChecker.CHECK_UPDATE_TYPE
+//                                    .MANUAL) != null) {
+//                        //显示更新提示框
+//                        new DownloadDialog();
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                    log.log(Level.SEVERE, "检测更新时请求数据失败！", e);
+//                }
+//            }).start();
 
             //实例化程序主体
             getInstance().run();
@@ -131,16 +130,16 @@ public class Main {
         }
 
         //使用beauty eye皮肤包替代NimRODLookAndFeel皮肤包
-        try {
-            /* 设置皮肤属性 */
-            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
-            UIManager.put("RootPane.setupButtonVisible", false);
-            BeautyEyeLNFHelper.translucencyAtFrameInactive = false;// 是否在窗口失焦时变成半透明状态
-            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();// 加载皮肤
-        } catch (Exception e) {
-            log.log(Level.SEVERE, "Look & Feel unsupported.", e);
-            exit();
-        }
+//        try {
+//            /* 设置皮肤属性 */
+//            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
+//            UIManager.put("RootPane.setupButtonVisible", false);
+//            BeautyEyeLNFHelper.translucencyAtFrameInactive = false;// 是否在窗口失焦时变成半透明状态
+//            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();// 加载皮肤
+//        } catch (Exception e) {
+//            log.log(Level.SEVERE, "Look & Feel unsupported.", e);
+//            exit();
+//        }
 
         // Get the image sets to use
         List<String> roleList = Arrays.asList(properties.getProperty("ActiveShimeji", "").split("/"));

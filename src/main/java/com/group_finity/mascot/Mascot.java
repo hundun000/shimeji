@@ -439,10 +439,10 @@ public class Mascot {
 
         this.behavior = behavior;
         if (behavior != null) {
-            System.out.println("behavior:" + behavior.getName());
+            System.out.println("mascot(" + id + ") behavior:" + behavior.getName());
             this.behavior.init(this);
         }else{
-            System.out.println("behavior is null" );
+            System.out.println("mascot(" + id + ") behavior is null" );
         }
     }
 

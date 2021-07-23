@@ -5,7 +5,7 @@
 	<ActionList>
 		<Action Name="Look" Type="Embedded" Class="com.group_finity.mascot.action.Look" />
 		<Action Name="Offset" Type="Embedded" Class="com.group_finity.mascot.action.Offset" />
-
+        <Action Name="Say" Type="Embedded" Class="com.group_finity.mascot.action.Say"/>
 		<!-- Standing -->
 
 		<Action Name="Stand" Type="Stay" BorderType="Floor">
@@ -299,6 +299,7 @@
 			<Action Type="Select">
 				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) ||
 					mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+					<ActionReference Name="Say" SayText="我掉下来啦QAQ"/>
 					<ActionReference Name="Bouncing"/>
 					<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
 				</Action>

@@ -4,7 +4,7 @@ import java.awt.Component;
 import javax.swing.JComponent;
 import javax.swing.JWindow;
 
-import com.sun.jna.examples.WindowUtils;
+import com.sun.jna.platform.WindowUtils;
 
 /**
  * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)

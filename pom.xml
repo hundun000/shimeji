@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>wishes</groupId>
+    <groupId>hundun</groupId>
     <artifactId>shimeji</artifactId>
-    <version>1.0.3-beta1</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
 
@@ -55,38 +55,16 @@
     </build>
 
     <dependencies>
-        <!-- 私有jar -->
         <dependency>
-            <groupId>com.wishes</groupId>
-            <artifactId>AbsoluteLayout-origin</artifactId>
-            <version>1.0</version>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE124</version>
         </dependency>
         <dependency>
-            <groupId>com.wishes</groupId>
-            <artifactId>examples-origin</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wishes</groupId>
-            <artifactId>jna-origin</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-        <!--idea的form_rt.jar依赖包-->
-        <dependency>
-            <groupId>com.idea</groupId>
-            <artifactId>forms</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <!--beauty eye依赖包
-        <dependency>
-            <groupId>org.lnf</groupId>
-            <artifactId>beautyeye</artifactId>
-            <version>1.0</version>
-        </dependency-->
-        <!-- 私有jar结束 -->
-
-        <!-- 网络依赖jar -->
+	    <groupId>net.java.dev.jna</groupId>
+		    <artifactId>jna-platform</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
         <!-- https://mvnrepository.com/artifact/log4j/log4j -->
         <dependency>
             <groupId>log4j</groupId>
@@ -126,7 +104,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 网络依赖jar结束 -->
     </dependencies>
 
 </project>

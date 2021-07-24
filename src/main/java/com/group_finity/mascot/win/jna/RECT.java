@@ -1,5 +1,8 @@
 package com.group_finity.mascot.win.jna;
 
+import java.util.Arrays;
+import java.util.List;
+
 import com.sun.jna.Structure;
 
 /**
@@ -25,4 +28,8 @@ public class RECT extends Structure {
 		this.top += dy;
 		this.bottom += dy;		
 	}
+	@Override
+    protected List<?> getFieldOrder() {
+        return Arrays.asList(new String[] {"left", "top", "right", "bottom"});
+    }
 }

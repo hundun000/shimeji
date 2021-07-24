@@ -9,7 +9,7 @@ import javax.swing.JWindow;
 
 import com.group_finity.mascot.image.NativeImage;
 import com.group_finity.mascot.image.TranslucentWindow;
-import com.sun.jna.examples.WindowUtils;
+import com.sun.jna.platform.WindowUtils;
 
 /**
  * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)

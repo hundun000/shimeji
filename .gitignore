@@ -9,12 +9,14 @@
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+logs/
 
 # Compiled class file
 *.class
 
 # Log file
 *.log
+*.log.lck
 
 # BlueJ files
 *.ctxt
